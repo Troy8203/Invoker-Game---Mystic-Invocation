@@ -20,100 +20,111 @@
           <li><a href="#">Settings</a></li>
         </ul>
       </nav>
-      <main>
-        <div class="img-hero">
-          <video
-            autoplay
-            loop
-            muted
-            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.webm"
-          ></video>
-          <img src="" alt="" />
-        </div>
-        <button class="controller" onclick="playGame()">
-          <img src="./src/play.svg" alt="icon-controller" />
-          <h4>Play</h4>
-        </button>
-        <div class="abilities">
-          <div class="buff-box">
-            <div class="buff-item" id="buff-item1">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-                class="buff-img"
-              />
-            </div>
-            <div class="buff-item" id="buff-item2">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-                alt="img-buff"
-                class="buff-img"
-              />
-            </div>
-            <div class="buff-item" id="buff-item3">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-                alt="img-buff"
-                class="buff-img"
-              />
-            </div>
-          </div>
-          <div class="abilities-container">
-            <button
-              class="abilities-box"
-              data-letter="Q"
-              onclick="setBuff('quas')"
-            >
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png"
-                alt="abilities-box-img"
-              />
-            </button>
-            <button
-              class="abilities-box"
-              data-letter="W"
-              onclick="setBuff('wex')"
-            >
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_wex.png"
-                alt="abilities-box-img"
-              />
-            </button>
-            <button
-              class="abilities-box"
-              data-letter="E"
-              onclick="setBuff('exort')"
-            >
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_exort.png"
-                alt="abilities-box-img"
-              />
-            </button>
-            <button class="abilities-box" data-letter="D" id="power1" onclick="castSpell(1)">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-                alt="abilities-box-img"
-              />
-            </button>
-            <button class="abilities-box" data-letter="F" id="power2" onclick="castSpell(2)">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-                alt="abilities-box-img"
-              />
-            </button>
-            <button class="abilities-box" data-letter="R" onclick="ultiBuff()">
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png"
-                alt="abilities-box-img"
-              />
-            </button>
-          </div>
-        </div>
-        <div class="score">
-          Score :
-          <span class="span-score">00</span>
-        </div>
-      </main>
     </header>
+    <main>
+      <div class="img-hero">
+        <video
+          autoplay
+          loop
+          muted
+          src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.webm"
+        ></video>
+        <img src="" alt="" />
+      </div>
+      <button class="controller" onclick="playGame()">
+        <img src="./src/play.svg" alt="icon-controller" />
+        <h4>Play</h4>
+      </button>
+      <div class="abilities">
+        <div class="buff-box">
+          <div class="buff-item" id="buff-item1">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+              class="buff-img"
+            />
+          </div>
+          <div class="buff-item" id="buff-item2">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+              alt="img-buff"
+              class="buff-img"
+            />
+          </div>
+          <div class="buff-item" id="buff-item3">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+              alt="img-buff"
+              class="buff-img"
+            />
+          </div>
+        </div>
+        <div class="abilities-container">
+          <button
+            class="abilities-box"
+            data-letter="Q"
+            onclick="setBuff('quas')"
+          >
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png"
+              alt="abilities-box-img"
+            />
+          </button>
+          <button
+            class="abilities-box"
+            data-letter="W"
+            onclick="setBuff('wex')"
+          >
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_wex.png"
+              alt="abilities-box-img"
+            />
+          </button>
+          <button
+            class="abilities-box"
+            data-letter="E"
+            onclick="setBuff('exort')"
+          >
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_exort.png"
+              alt="abilities-box-img"
+            />
+          </button>
+          <button
+            class="abilities-box"
+            data-letter="D"
+            id="power1"
+            onclick="castSpell(1)"
+          >
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+              alt="abilities-box-img"
+            />
+          </button>
+          <button
+            class="abilities-box"
+            data-letter="F"
+            id="power2"
+            onclick="castSpell(2)"
+          >
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+              alt="abilities-box-img"
+            />
+          </button>
+          <button class="abilities-box" data-letter="R" onclick="ultiBuff()">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png"
+              alt="abilities-box-img"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="score">
+        Score :
+        <span class="span-score">00</span>
+      </div>
+    </main>
+
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

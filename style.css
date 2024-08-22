@@ -18,18 +18,13 @@
 body {
   font-family: Radiance, sans-serif;
   color: var(--color-font);
-
-  background-image: linear-gradient(
-    to top,
-    var(--bg-color-black),
-    var(--bg-color-dark-grey)
-  );
-  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--bg-color-black);
 }
 
 nav {
   background-color: var(--color-primary);
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -94,9 +89,8 @@ main {
   width: 20rem;
   height: 13em;
   overflow: hidden;
-  background-color: var(--color-primary);
+  mask-image: linear-gradient(var(--bg-color-black) 70%, transparent);
   border-radius: 10px;
-
   justify-content: center;
 }
 
