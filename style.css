@@ -4,6 +4,7 @@
   --color-font: #fff;
   --color-red: #f44336;
   --color-green: #4caf50;
+  --color-blue: #4b69ff;
 
   --bg-color-black: #050505;
   --bg-color-dark-grey: #171717;
@@ -71,9 +72,27 @@ nav ul li.active {
   background-color: var(--color-secondary);
 }
 
-nav ul li a {
+.link {
   color: var(--color-font);
   text-decoration: none;
+  font-size: .8rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: .9rem;
+  }
+}
+
+.link .icon-link {
+  width: 1.2rem;
+  height: auto;
 }
 
 main {
