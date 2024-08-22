@@ -3,6 +3,7 @@
   --color-secondary: #363b3f;
   --color-font: #fff;
   --color-red: #f44336;
+  --color-green: #4caf50;
 
   --bg-color-black: #050505;
   --bg-color-dark-grey: #171717;
@@ -18,7 +19,11 @@ body {
   font-family: Radiance, sans-serif;
   color: var(--color-font);
 
-  background-image: linear-gradient(to top, var(--bg-color-black), var(--bg-color-dark-grey));
+  background-image: linear-gradient(
+    to top,
+    var(--bg-color-black),
+    var(--bg-color-dark-grey)
+  );
   height: 100vh;
 }
 
@@ -32,7 +37,7 @@ nav {
   gap: 1rem;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   nav {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -43,7 +48,7 @@ nav .logo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 nav .logo h3 {
@@ -57,12 +62,12 @@ nav .logo h3 {
 nav ul {
   display: flex;
   flex-flow: row nowrap;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 nav ul li {
   list-style: none;
-  padding: .5rem .7rem;
+  padding: 0.5rem 0.7rem;
 }
 
 nav ul li:hover,
@@ -104,7 +109,7 @@ main {
 .controller {
   background-color: var(--color-primary);
   width: 20rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   border-radius: 10px;
 
   border: none;
@@ -115,7 +120,7 @@ main {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .controller:hover {
@@ -138,7 +143,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .buff-box {
@@ -147,7 +152,7 @@ main {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .buff-item {
@@ -165,11 +170,11 @@ main {
 
 .abilities-container {
   background-color: var(--color-primary);
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .abilities-box {
@@ -190,7 +195,7 @@ main {
   border: solid 2px var(--color-font);
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .abilities-box {
     width: 5rem;
     height: 5rem;
@@ -205,19 +210,23 @@ main {
 
 .abilities-box::after {
   content: attr(data-letter);
-  font-size: .7rem;
+  font-size: 0.7rem;
   position: absolute;
   top: 2px;
   left: 2px;
-  padding: 0 .3rem;
+  padding: 0 0.3rem;
   border-radius: 5px;
   text-shadow: 0 0 2px var(--color-font);
-  background-image: linear-gradient(to top, var(--bg-color-black), var(--bg-color-dark-grey));
+  background-image: linear-gradient(
+    to top,
+    var(--bg-color-black),
+    var(--bg-color-dark-grey)
+  );
 }
 
 .score {
   background-color: var(--color-primary);
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 10px;
 
   border: none;
@@ -228,5 +237,38 @@ main {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
+
+  position: relative;
+}
+
+.add-point {
+  font-size: 0.9rem;
+  font-weight: 800;
+  position: absolute;
+  top: -30px;
+  right: .5rem;
+  z-index: 5;
+
+  /* Animation */
+  animation-name: float;
+  animation-duration: 4s;
+}
+
+.success {
+  color: var(--color-green);
+}
+
+.fail {
+  color: var(--color-red);
+}
+
+@keyframes float {
+  from {
+    top: 0px;
+  }
+  to {
+    color: rgba(0, 0, 0, 0);
+    top: -80px;
+  }
 }
