@@ -23,10 +23,9 @@
             </div>
           </li>
           <li>
-            <div href="#" class="link">
+            <div class="link" onclick="openInstruction()">
               <img class="icon-link" src="./src/icons/teleport_icon.svg" alt="icon-home"/>
-              Instructions</div
-              >
+              Instructions</div>
             </li>
             <li>
               <div href="#" class="link">
@@ -139,8 +138,43 @@
         Score :
         <span class="span-score">00</span>
       </div>
+      <div class="modal modal-instructions">
+        <div class="icon-close">
+          <img
+            src="./src/close.svg"
+            alt="icon-close"
+            class="icon-modal"
+            onclick="closeModal()"
+          />
+        </div>
+        <div class="modal-container">
+          <div class="modal-title">
+            <img
+              src="./src/icons/teleport_icon.svg"
+              alt="icon-close"
+              class="icon-svg"
+            />
+            <h4>Instructions</h4>
+          </div>
+          <div class="modal-content">
+            <p class="modal-content-text">
+              The game is simple, you have to invoke the spells of the invoker hero from the game Dota 2. You have to press the keys Q, W, E to invoke the spells and D, F to cast them. The R key is used to invoke the ultimate spell. The game will end when you invoke the wrong spell or take too long to invoke the spell.
+            </p>
+            <img src="./src/img/keyboard.png" alt="keyboard-spells" class="modal-content-img">
+            <p class="modal-content-text">
+              To invoke a spell, you must combine the three elemental orbs associated with the Q, W, and E keys. Each combination of orbs corresponds to a specific spell.
+            </p>
+            <div class="modal-container-spells">
+            </div>
+            <p class="modal-content-text">
+              Your score will increase with each correctly invoked spell. The faster you invoke and cast the correct spell, the higher your score will be. If you make a mistake or take too long, the game ends, and your final score will be displayed.
+            </p>
+            <img src="./src/img/points.png" alt="keyboard-spells" class="modal-content-img">
+        </div>
+        </div>
     </main>
-
+    <script type="module" src="./js/events.js"></script>
+    <script type="module" src="./js/load_spells.js"></script>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

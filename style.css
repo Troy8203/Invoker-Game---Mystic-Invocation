@@ -64,6 +64,7 @@ nav ul {
 nav ul li {
   list-style: none;
   padding: 0.5rem 0.7rem;
+  cursor: pointer;
 }
 
 nav ul li:hover,
@@ -284,4 +285,123 @@ main {
     color: rgba(0, 0, 0, 0);
     top: -80px;
   }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-active {
+  display: block;
+}
+
+/*cross icon*/
+.icon-modal {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-container {
+  background-color: var(--color-primary);
+  width: 80%;
+  max-width: 30rem;
+  min-height: 80%;
+  max-height: 80%;
+  margin: 5rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  overflow-y: scroll;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ecffb5;
+  text-decoration: underline;
+}
+
+.icon-svg {
+  width: 2.5rem;
+  height: auto;
+}
+
+.modal-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.modal-content-text {
+  font-size: .9rem;
+}
+
+.modal-content-img {
+  margin: .8rem 0;
+  width: 20rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*List spells modal*/
+.modal-container-spells {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: .8rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .modal-container-spells {
+    padding: 0 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.modal-spell {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+.modal-spell-img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.modal-spell-name {
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.modal-spell-combination {
+  font-size: .7rem;
+  flex: 1;
+  text-align: right;
 }
