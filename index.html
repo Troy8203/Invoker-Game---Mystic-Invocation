@@ -1,180 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./src/favicon.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mystic Invocation</title>
-    <link rel="stylesheet" href="/fonts.css" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="./src/icon.svg" alt="logo_img" />
-          <h3>Mystic Invocation</h3>
-        </div>
-        <ul>
-          <li class="active">
-            <div href="#" class="link">
-              <img class="icon-link" src="./src/icons/bottle_icon.svg" alt="icon-settings" />
-              Home
-            </div>
-          </li>
-          <li>
-            <div class="link" onclick="openInstruction()">
-              <img class="icon-link" src="./src/icons/teleport_icon.svg" alt="icon-home"/>
-              Instructions</div>
-            </li>
-            <li>
-              <div href="#" class="link">
-                <img class="icon-link" src="./src/icons/scepter_icon.svg" alt="icon-hero"/>
-              Settings</div
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="img-hero">
-        <video
-          autoplay
-          loop
-          muted
-          src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.webm"
-        ></video>
-        <img src="" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./src/favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystic Invocation</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./src/icon.svg" alt="logo_img" />
+        <h3>Mystic Invocation</h3>
       </div>
-      <button class="controller" onclick="playGame()">
-        <img src="./src/play.svg" alt="icon-controller" />
-        <h4>Play</h4>
-      </button>
-      <div class="abilities">
-        <div class="buff-box">
-          <div class="buff-item" id="buff-item1">
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-              class="buff-img"
-            />
+      <ul>
+        <li class="active">
+          <div href="#" class="link">
+            <img class="icon-link" src="./src/icons/bottle_icon.svg" alt="icon-settings" />
+            Home
           </div>
-          <div class="buff-item" id="buff-item2">
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-              alt="img-buff"
-              class="buff-img"
-            />
+        </li>
+        <li>
+          <div class="link" onclick="openInstruction()">
+            <img class="icon-link" src="./src/icons/teleport_icon.svg" alt="icon-home" />
+            Instructions
           </div>
-          <div class="buff-item" id="buff-item3">
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-              alt="img-buff"
-              class="buff-img"
-            />
+        </li>
+        <li>
+          <div href="#" class="link" onclick="openSettings()">
+            <img class="icon-link" src="./src/icons/scepter_icon.svg" alt="icon-hero" />
+            Settings
           </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="img-hero">
+      <video autoplay loop muted
+        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.webm"></video>
+      <img src="" alt="" />
+    </div>
+    <button class="controller" onclick="playGame()">
+      <img src="./src/play.svg" alt="icon-controller" />
+      <h4>Play</h4>
+    </button>
+    <div class="abilities">
+      <div class="buff-box">
+        <div class="buff-item" id="buff-item1">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+            class="buff-img" />
         </div>
-        <div class="abilities-container">
-          <button
-            class="abilities-box"
-            data-letter="Q"
-            onclick="setBuff('quas')"
-          >
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png"
-              alt="abilities-box-img"
-            />
-          </button>
-          <button
-            class="abilities-box"
-            data-letter="W"
-            onclick="setBuff('wex')"
-          >
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_wex.png"
-              alt="abilities-box-img"
-            />
-          </button>
-          <button
-            class="abilities-box"
-            data-letter="E"
-            onclick="setBuff('exort')"
-          >
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_exort.png"
-              alt="abilities-box-img"
-            />
-          </button>
-          <button
-            class="abilities-box"
-            data-letter="D"
-            id="power1"
-            onclick="castSpell(1)"
-          >
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-              alt="abilities-box-img"
-            />
-          </button>
-          <button
-            class="abilities-box"
-            data-letter="F"
-            id="power2"
-            onclick="castSpell(2)"
-          >
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
-              alt="abilities-box-img"
-            />
-          </button>
-          <button class="abilities-box" data-letter="R" onclick="ultiBuff()">
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png"
-              alt="abilities-box-img"
-            />
-          </button>
+        <div class="buff-item" id="buff-item2">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+            alt="img-buff" class="buff-img" />
+        </div>
+        <div class="buff-item" id="buff-item3">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+            alt="img-buff" class="buff-img" />
         </div>
       </div>
-      <div class="score">
-        Score :
-        <span class="span-score">00</span>
+      <div class="abilities-container">
+        <button class="abilities-box" data-letter="Q" onclick="setBuff('quas')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png"
+            alt="abilities-box-img" />
+        </button>
+        <button class="abilities-box" data-letter="W" onclick="setBuff('wex')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_wex.png"
+            alt="abilities-box-img" />
+        </button>
+        <button class="abilities-box" data-letter="E" onclick="setBuff('exort')">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_exort.png"
+            alt="abilities-box-img" />
+        </button>
+        <button class="abilities-box" data-letter="D" id="power1" onclick="castSpell(1)">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+            alt="abilities-box-img" />
+        </button>
+        <button class="abilities-box" data-letter="F" id="power2" onclick="castSpell(2)">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/grey_painterly.png"
+            alt="abilities-box-img" />
+        </button>
+        <button class="abilities-box" data-letter="R" onclick="ultiBuff()">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png"
+            alt="abilities-box-img" />
+        </button>
       </div>
-      <div class="modal modal-instructions">
-        <div class="icon-close">
-          <img
-            src="./src/close.svg"
-            alt="icon-close"
-            class="icon-modal"
-            onclick="closeModal()"
-          />
+    </div>
+    <div class="score">
+      Score :
+      <span class="span-score">00</span>
+    </div>
+    <!-- ModalInstruction -->
+    <div class="modal modal-instructions">
+      <div class="icon-close">
+        <img src="./src/close.svg" alt="icon-close" class="icon-modal" onclick="closeModal()" />
+      </div>
+      <div class="modal-container">
+        <div class="modal-title">
+          <img src="./src/icons/teleport_icon.svg" alt="icon-close" class="icon-svg" />
+          <h4>Instructions</h4>
         </div>
-        <div class="modal-container">
-          <div class="modal-title">
-            <img
-              src="./src/icons/teleport_icon.svg"
-              alt="icon-close"
-              class="icon-svg"
-            />
-            <h4>Instructions</h4>
+        <div class="modal-content">
+          <p class="modal-content-text">
+            The game is simple, you have to invoke the spells of the invoker hero from the game Dota 2. You have to
+            press the keys Q, W, E to invoke the spells and D, F to cast them. The R key is used to invoke the
+            ultimate spell. The game will end when you invoke the wrong spell or take too long to invoke the spell.
+          </p>
+          <img src="./src/img/keyboard.png" alt="keyboard-spells" class="modal-content-img" />
+          <p class="modal-content-text">
+            To invoke a spell, you must combine the three elemental orbs associated with the Q, W, and E keys. Each
+            combination of orbs corresponds to a specific spell.
+          </p>
+          <div class="modal-container-spells">
           </div>
-          <div class="modal-content">
-            <p class="modal-content-text">
-              The game is simple, you have to invoke the spells of the invoker hero from the game Dota 2. You have to press the keys Q, W, E to invoke the spells and D, F to cast them. The R key is used to invoke the ultimate spell. The game will end when you invoke the wrong spell or take too long to invoke the spell.
-            </p>
-            <img src="./src/img/keyboard.png" alt="keyboard-spells" class="modal-content-img">
-            <p class="modal-content-text">
-              To invoke a spell, you must combine the three elemental orbs associated with the Q, W, and E keys. Each combination of orbs corresponds to a specific spell.
-            </p>
-            <div class="modal-container-spells">
-            </div>
-            <p class="modal-content-text">
-              Your score will increase with each correctly invoked spell. The faster you invoke and cast the correct spell, the higher your score will be. If you make a mistake or take too long, the game ends, and your final score will be displayed.
-            </p>
-            <img src="./src/img/points.png" alt="keyboard-spells" class="modal-content-img">
+          <p class="modal-content-text">
+            Your score will increase with each correctly invoked spell. The faster you invoke and cast the correct
+            spell, the higher your score will be. If you make a mistake or take too long, the game ends, and your
+            final score will be displayed.
+          </p>
+          <img src="./src/img/points.png" alt="keyboard-spells" class="modal-content-img" />
         </div>
+      </div>
+    </div>
+    <!-- ModalSettings -->
+    <div class="modal modal-settings">
+      <div class="icon-close">
+        <img src="./src/close.svg" alt="icon-close" class="icon-modal" onclick="closeModal()" />
+      </div>
+      <div class="modal-container">
+        <div class="modal-title">
+          <img src="./src/icons/scepter_icon.svg" alt="icon-close" class="icon-svg" />
+          <h4>Settings</h4>
         </div>
-    </main>
-    <script type="module" src="./js/events.js"></script>
-    <script type="module" src="./js/load_spells.js"></script>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+        <div class="modal-content">
+          <p>
+            Sorry but the settings are not available yet. We are working on it.
+            <br>
+            Please come back later.
+          </p>
+          <img src="./src/img/invoker_sad.png" alt="keyboard-spells" class="modal-content-img" />
+        </div>
+      </div>
+    </div>
+    
+
+  </main>
+  <script type="module" src="./js/events.js"></script>
+  <script type="module" src="./js/load_spells.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
